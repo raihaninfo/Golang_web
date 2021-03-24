@@ -14,7 +14,6 @@ var db *sql.DB
 var err error
 
 func init() {
-	// Open up our database connection.
 	// The database is called testDb
 	db, err = sql.Open("mysql", "root:mysql@tcp(127.0.0.1:3306)/hosting")
 
