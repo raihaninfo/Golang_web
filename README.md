@@ -1,1 +1,2 @@
-# Golang Website
+# Golang Website using net/http pacakage
+
