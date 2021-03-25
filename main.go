@@ -82,7 +82,6 @@ func request(w http.ResponseWriter, r *http.Request) {
 	//fmt.Fprintf(w, `received form %s %s %s`, name, company, email) //response
 
 	//Method 2
-
 	/*r.ParseForm()
 	for key, val := range r.Form {
 		fmt.Println(key, val)
