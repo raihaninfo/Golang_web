@@ -72,7 +72,7 @@ func docs(w http.ResponseWriter, r *http.Request) {
 	ptmp.Execute(w, nil)
 }
 
-func request(w http.ResponseWriter, r *http.Request) {
+func request(w http.ResponseWriter,  r *http.Request) {
 
 	// Method 1
 	name := r.FormValue("name")
