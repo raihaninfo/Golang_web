@@ -14,7 +14,7 @@ var db *sql.DB
 var err error
 
 func init() {
-	// The database is called testDb
+	// The database is called hosting
 	db, err = sql.Open("mysql", "root:mysql@tcp(127.0.0.1:3306)/hosting")
 
 	// if there is an error opening the connection, handle it
@@ -22,7 +22,6 @@ func init() {
 		panic(err.Error())
 	}
 
-	// defer the close till after the main function has finished
 	//defer db.Close()
 	fmt.Println("database connection successfull")
 }
@@ -72,14 +71,12 @@ func docs(w http.ResponseWriter, r *http.Request) {
 	ptmp.Execute(w, nil)
 }
 
-func request(w http.ResponseWriter,  r *http.Request) {
+func request(w http.ResponseWriter, r *http.Request) {
 
 	// Method 1
 	name := r.FormValue("name")
 	company := r.FormValue("company")
 	email := r.FormValue("email")
-	//fmt.Println(name, company, email)
-	//fmt.Fprintf(w, `received form %s %s %s`, name, company, email) //response
 
 	//Method 2
 	/*r.ParseForm()
